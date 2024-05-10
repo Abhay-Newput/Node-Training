@@ -20,36 +20,40 @@ To work with file handling in node we need `fs` (File System) module, which prov
 
 2. Writing to a File: Use functions like fs.writeFile() or fs.writeFileSync() to write data to a file.
 
-const fs = require('fs');
+   ```
+   const fs = require('fs');
 
-// Asynchronous file write
-fs.writeFile('file.txt', 'Hello, world!', (err) => {
-if (err) throw err;
-console.log('Data written to file');
-});
+   // Asynchronous file write
+   fs.writeFile('file.txt', 'Hello, world!', (err) => {
+   if (err) throw err;
+   console.log('Data written to file');
+   });
 
-// Synchronous file write
-fs.writeFileSync('file.txt', 'Hello, world!');
-console.log('Data written to file');
+   // Synchronous file write
+   fs.writeFileSync('file.txt', 'Hello, world!');
+   console.log('Data written to file');
+   ```
 
 3. Working with Directories: You can use functions like fs.readdir() to read the contents of a directory, fs.mkdir() to create a directory, and fs.rmdir() to remove a directory.
 
-const fs = require('fs');
+   ```
+   const fs = require('fs');
 
-// Read directory contents
-fs.readdir('.', (err, files) => {
-if (err) throw err;
-console.log('Files in current directory:', files);
-});
+   // Read directory contents
+   fs.readdir('.', (err, files) => {
+   if (err) throw err;
+   console.log('Files in current directory:', files);
+   });
 
-// Create a directory
-fs.mkdir('new_directory', (err) => {
-if (err) throw err;
-console.log('Directory created');
-});
+   // Create a directory
+   fs.mkdir('new_directory', (err) => {
+   if (err) throw err;
+   console.log('Directory created');
+   });
 
-// Remove a directory
-fs.rmdir('new_directory', (err) => {
-if (err) throw err;
-console.log('Directory deleted');
-});
+   // Remove a directory
+   fs.rmdir('new_directory', (err) => {
+   if (err) throw err;
+   console.log('Directory deleted');
+   });
+   ```
