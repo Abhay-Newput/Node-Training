@@ -4,19 +4,19 @@ To work with file handling in node we need `fs` (File System) module, which prov
 
 1. Reading from a File: You can use functions like fs.readFile() or fs.readFileSync() to read data from a file.
 
-```
-const fs = require('fs');
+   ```
+   const fs = require('fs');
 
-// Asynchronous file read
-fs.readFile('file.txt', 'utf8', (err, data) => {
-if (err) throw err;
-console.log(data);
-});
+   // Asynchronous file read
+   fs.readFile('file.txt', 'utf8', (err, data) => {
+   if (err) throw err;
+   console.log(data);
+   });
 
-// Synchronous file read
-const data = fs.readFileSync('file.txt', 'utf8');
-console.log(data);
-```
+   // Synchronous file read
+   const data = fs.readFileSync('file.txt', 'utf8');
+   console.log(data);
+   ```
 
 2. Writing to a File: Use functions like fs.writeFile() or fs.writeFileSync() to write data to a file.
 
