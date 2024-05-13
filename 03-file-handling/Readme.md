@@ -57,3 +57,15 @@ To work with file handling in node we need `fs` (File System) module, which prov
    console.log('Directory deleted');
    });
    ```
+
+## Synchronous (Sync) File Handling:
+
+- Synchronous file handling operations block the execution of further code until the operation is complete.
+- In synchronous operations, the program waits until the file operation (reading, writing, etc.) finishes before moving on to the next line of code.
+- Synchronous operations are simpler to use and understand, especially for sequential tasks, as the flow of execution is straightforward.
+
+## Asynchronous (Async) File Handling:
+
+- Asynchronous file handling operations do not block the execution of further code.
+- In asynchronous operations, the program initiates the file operation and continues executing the subsequent lines of code without waiting for the operation to finish.
+- Asynchronous operations are often preferred for I/O-bound tasks (such as file operations), as they allow the program to continue doing other work while waiting for I/O operations to complete. This can improve overall program efficiency and responsiveness, especially in scenarios where multiple operations occur simultaneously.

@@ -1,1 +1,1 @@
-Created the file and insterted this text via fs.writeFile Sync function
+Created the file and insterted this text via fs.writeFile Async function
