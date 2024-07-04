@@ -29,4 +29,13 @@ app.use((req, res, next) => {
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 
+app.use((err, req, res, next) => {
+  const { statusCode, status, isOperational, message } = err;
+  res.status(statusCode || 500).json({
+    status: status,
+    message: message,
+    isOperational,
+  });
+});
+
 module.exports = app;
