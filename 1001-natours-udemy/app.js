@@ -1,10 +1,20 @@
 const express = require('express');
 const morgan = require('morgan');
+const rateLimit = require('express-rate-limit');
 
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
 
 const app = express();
+
+// GLOBAL Middlewares
+const limiter = rateLimit({
+  max: 100,
+  windowMs: 60 * 60 * 1000,
+  message: 'Too many request from this IP, Please try in an hour!!',
+});
+
+app.use('/api', limiter);
 
 app.use(express.json());
 app.use(morgan('dev'));
