@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
 
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -8,6 +9,8 @@ const userRouter = require('./routes/userRoutes');
 const app = express();
 
 // GLOBAL Middlewares
+app.use(helmet());
+
 const limiter = rateLimit({
   max: 100,
   windowMs: 60 * 60 * 1000,
